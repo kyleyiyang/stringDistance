@@ -2,7 +2,7 @@ public class HelloWorld{
 
      public static void main(String []args){
         System.out.println("Hello World");
-        String s = "eeloveleeetcode";
+        String s = "eeloveleeetcod";
         String l;
         int m=0;
         while (s.length()>0) {
@@ -16,9 +16,15 @@ public class HelloWorld{
                     s="";
                 }
             } else {
-                l = s.substring(0, s.indexOf("e"));
+                if (s.contains("e")) {
+                    l = s.substring(0, s.indexOf("e"));
+                    s = s.substring(s.indexOf("e"));
+                } else {
+                    l=s;
+                    s="";
+                }
                 m+=l.length();
-                s = s.substring(s.indexOf("e"));
+                
             }
             
             System.out.println("l="+l+"; s="+s);
