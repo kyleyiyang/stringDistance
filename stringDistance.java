@@ -9,7 +9,6 @@ public class HelloWorld{
             System.out.println("m="+m);
             if (s.charAt(0)=="e".charAt(0)) {
                 l = "e";
-                m++;
                 if(s.length()>1) {
                     s = s.substring(s.indexOf("e")+1);
                 } else {
@@ -23,10 +22,8 @@ public class HelloWorld{
                     l=s;
                     s="";
                 }
-                m+=l.length();
-                
             }
-            
+            m+=l.length();
             System.out.println("l="+l+"; s="+s);
         }
      }
